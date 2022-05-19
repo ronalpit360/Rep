@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actualizar Cancion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form  [formGroup]="updateSongForm" (submit)= "updateSong()" >
+    <ion-item>
+      <ion-label stacked> Nombre de la canción </ion-label>
+      <ion-input  formControlName="songName" type="text" placeholder="{{ song.songName }} "> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked> Nombre del Artista </ion-label>
+        <ion-input  formControlName="artistName" type="text" placeholder="{{song.artistName}}"> </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked> Album</ion-label>
+          <ion-input formControlName="albumName" type="text" placeholder="{{song.albumName }} "> </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Descripción</ion-label>
+            <ion-input formControlName="songDescription"  type="text" placeholder=" {{ song.songDescription }}  "> </ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit" >Actualizar canción </ion-button>
+    </form>
+</ion-content>

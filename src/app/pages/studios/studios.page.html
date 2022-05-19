@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/create-studio']">
+        <ion-icon name="add" >    </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Estudios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+<ion-card *ngFor="let RecordingStudios of studioList | async " routerLink="/detailstudio/{{RecordingStudios.id}}">
+<ion-card-header>
+{{RecordingStudios.studioName}}
+</ion-card-header>
+<ion-card-content>
+Tipo: {{RecordingStudios.type_of_melody}}
+Numero de cabinas: {{RecordingStudios.number_of_cabins}}
+</ion-card-content>
+</ion-card>
+<ion-button expand="block"  routerLink="/home"> Volver </ion-button>
+</ion-content>

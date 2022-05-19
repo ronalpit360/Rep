@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Estudio de Grabacion</h3>
+  <p> El estudio {{ studio.studioName }} pertenece a  {{studio.owner}}</p>
+  
+  <h3>Genero</h3>
+  <p>Produce musica principalmente de  {{studio.type_of_melody }} </p>
+  
+  <h3>Capacidad</h3>
+  <p>Y tiene de capacidad{{ studio.number_of_cabins }}  cabinas </p>
+  
+  <ion-button expand="block"  (click)="deleteStudio()"> Eliminar Estudio </ion-button>
+  <ion-button expand="block"  routerLink="/studios"> Volver </ion-button>
+
+  </ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <h3>Artista</h3>
+  <p> La canción {{ song.songName }} fue escrita por el autor {{song.artistName}}</p>
+  
+  <h3>Album</h3>
+  <p>Esta canción pertenece al album {{song.albumName }} </p>
+  
+  <h3>Descripción</h3>
+  <p>{{ song.songDescription }}   </p>
+  
+  <ion-button expand="block"  (click)="deleteSong()"> Eliminar Cancion </ion-button>
+  <ion-button expand="block"  routerLink="/update/{{song.id}}"> Actualizar Cancion </ion-button>
+  <ion-button expand="block"  routerLink="/home"> Volver </ion-button>
+
+  </ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Estudio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  [formGroup]="createStudioForm" (submit)= "createStudio()" >
+    <ion-item>
+    <ion-label stacked> Nombre del estudio </ion-label>
+    <ion-input formControlName="studioName"  type="text" placeholder="Como se llama el estudio? "> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked> Genero  </ion-label>
+      <ion-input formControlName="type_of_melody"  type="text" placeholder="Genero de la musica? "> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked> Cabinas</ion-label>
+        <ion-input formControlName="number_of_cabins"  type="number" placeholder="Cuantas cabinas tiene? "> </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Dueño</ion-label>
+          <ion-input formControlName="owner"  type="text" placeholder="Nombre del dueño? "> </ion-input>
+      </ion-item>
+    <ion-button expand="block" type="submit" >Agregar Estudio </ion-button>
+    </form>
+    
+</ion-content>
